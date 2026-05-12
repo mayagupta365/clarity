@@ -291,7 +291,7 @@ export default function Home() {
                     </div>
 
                     {/* Right — AI panel (desktop only) */}
-                    <div className=" lg:block lg:col-span-2">
+                    <div className="sm:hidden md:hidden max-sm:hidden  lg:block lg:col-span-2">
                       <div className="sticky top-20 rounded-xl border border-border bg-card p-4">
                         <Tabs
                           value={activeTab}

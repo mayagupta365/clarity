@@ -41,9 +41,10 @@ export function SearchBar({ onSearch, initialQuery = "", variant = "landing", cl
         onClick={() => setshowHistory(true)}
       >
         <Search
+        onClick={handleSubmit}
 
           className={cn(
-            "absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground",
+            "absolute right-4 top-1/2 -translate-y-1/2 text-muted-foreground",
             isLanding ? "h-6 w-6" : "h-5 w-5"
           )}
         />
@@ -58,6 +59,7 @@ export function SearchBar({ onSearch, initialQuery = "", variant = "landing", cl
             isLanding ? "pl-14 pr-6 py-5 text-lg" : "pl-12 pr-5 py-3 text-base"
           )}
         />
+
       </form>
       { showHistory &&  history.length > 0 && (
         <div className="mt-3 flex flex-wrap gap-2">
