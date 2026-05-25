@@ -160,27 +160,53 @@ export default function Home() {
           className="absolute -top-1/2 -left-1/2 h-[200%] w-[200%] animate-gradient opacity-30"
           style={{
             background:
-              "radial-gradient(ellipse at 20% 50%, oklch(0.35 0.15 260) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, oklch(0.25 0.1 280) 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, oklch(0.2 0.08 240) 0%, transparent 50%)",
+              "radial-gradient(ellipse at 20% 50%, rgba(229,9,20,0.08) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(229,9,20,0.05) 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, rgba(20,20,20,0.8) 0%, transparent 50%)",
           }}
         />
       </div>
 
       {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center gap-2 sm:gap-4 px-3 sm:px-4 py-2 sm:py-3">
-          <a
-            href="/"
-            className="text-lg sm:text-xl font-black tracking-tight text-foreground shrink-0"
+      <header className="sticky top-0 z-50" style={{ background: "#e50914" }}>
+        <div className="mx-auto flex max-w-7xl justify-center items-center gap-2 sm:gap-8 px-3 sm:px-4 py-2 sm:py-3">
+
+          {/* Logo */}
+
+          <a href="/"
+            className="text-2xl sm:text-2xl font-black tracking-tight shrink-0"
+            style={{ color: "#ffffff", letterSpacing: "-0.5px" }}
           >
-            Clarity<span className="text-primary">Tube</span>
+            Clarity<span style={{ color: "#000000" }}>Tube</span>
           </a>
+
+          {/* Search bar */}
           {hasSearched && (
-            <SearchBar
-              onSearch={handleSearch}
-              variant="compact"
-              className="flex-1 max-w-xl"
-            />
+            <div className="flex-1 max-w-xl ">
+              <SearchBar
+                onSearch={handleSearch}
+                variant="compact"
+                className="w-full rounded-2xl"
+                style={{
+                  background: "rgba(0,0,0,0.25)",
+                  border: "0.5px solid rgba(0,0,0,0.2)",
+                  color: "#ffffff",
+                }}
+              />
+            </div>
           )}
+
+          {/* Sign in pill */}
+          <div
+            className="ml-auto shrink-0 text-xs text-white cursor-pointer max-lg:hidden sm:block"
+            style={{
+              background: "rgba(0,0,0,0.2)",
+              border: "0.5px solid rgba(255,255,255,0.2)",
+              padding: "6px 14px",
+              borderRadius: "6px",
+            }}
+          >
+            Sign in
+          </div>
+
         </div>
       </header>
 

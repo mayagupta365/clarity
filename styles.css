@@ -74,45 +74,69 @@
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.145 0.028 260);
-  --foreground: oklch(0.97 0.005 260);
-  --card: oklch(0.18 0.025 260);
-  --card-foreground: oklch(0.97 0.005 260);
-  --popover: oklch(0.18 0.025 260);
-  --popover-foreground: oklch(0.97 0.005 260);
-  --primary: oklch(0.62 0.19 260);
-  --primary-foreground: oklch(0.98 0.005 260);
-  --secondary: oklch(0.22 0.025 260);
-  --secondary-foreground: oklch(0.88 0.02 260);
-  --muted: oklch(0.22 0.02 260);
-  --muted-foreground: oklch(0.65 0.03 260);
-  --accent: oklch(0.25 0.035 260);
-  --accent-foreground: oklch(0.97 0.005 260);
-  --destructive: oklch(0.58 0.22 25);
-  --destructive-foreground: oklch(0.98 0.005 260);
-  --border: oklch(0.28 0.025 260);
-  --input: oklch(0.25 0.025 260);
-  --ring: oklch(0.62 0.19 260);
-  --score-high: oklch(0.72 0.19 145);
-  --score-mid: oklch(0.78 0.16 85);
-  --score-low: oklch(0.63 0.22 25);
-  --chat-user: oklch(0.62 0.19 260);
-  --chat-ai: oklch(0.25 0.02 260);
-  --chart-1: oklch(0.62 0.19 260);
-  --chart-2: oklch(0.72 0.19 145);
-  --chart-3: oklch(0.78 0.16 85);
-  --chart-4: oklch(0.63 0.22 25);
-  --chart-5: oklch(0.7 0.15 300);
-  --sidebar: oklch(0.16 0.025 260);
-  --sidebar-foreground: oklch(0.97 0.005 260);
-  --sidebar-primary: oklch(0.62 0.19 260);
-  --sidebar-primary-foreground: oklch(0.98 0.005 260);
-  --sidebar-accent: oklch(0.25 0.035 260);
-  --sidebar-accent-foreground: oklch(0.97 0.005 260);
-  --sidebar-border: oklch(0.28 0.025 260);
-  --sidebar-ring: oklch(0.62 0.19 260);
+
+  /* Netflix Dark */
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: #141414;
+  --card-foreground: #ffffff;
+  --popover: #141414;
+  --popover-foreground: #ffffff;
+
+  /* Netflix Red primary */
+  --primary: #e50914;
+  --primary-foreground: #ffffff;
+
+  --secondary: #1f1f1f;
+  --secondary-foreground: #ffffff;
+
+  --muted: #1f1f1f;
+  --muted-foreground: #b3b3b3;
+
+  --accent: #2a2a2a;
+  --accent-foreground: #ffffff;
+
+  --destructive: #e50914;
+  --destructive-foreground: #ffffff;
+
+  --border: #2a2a2a;
+  --input: #1f1f1f;
+  --ring: #e50914;
+
+  /* Score colors */
+  --score-high: #46d369;
+  --score-mid: #ffa500;
+  --score-low: #e50914;
+
+  /* Chat bubbles */
+  --chat-user: #e50914;
+  --chat-ai: #1f1f1f;
+
+  /* Charts */
+  --chart-1: #e50914;
+  --chart-2: #46d369;
+  --chart-3: #ffa500;
+  --chart-4: #b3b3b3;
+  --chart-5: #ffffff;
+
+  /* Sidebar */
+  --sidebar: #0a0a0a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #e50914;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1f1f1f;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #2a2a2a;
+  --sidebar-ring: #e50914;
+}
+header input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
+header input {
+  color: #ffffff !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+}
 @layer base {
   * { border-color: var(--color-border); }
   body {
