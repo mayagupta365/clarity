@@ -45,7 +45,7 @@ export function formulaFallback(videos: any[]) {
   
         const score = Math.round(
           (likeRatio * 0.35 + engagementRate * 0.35 +
-           timeDecay * 0.20 + commentScore * 0.10) * 100
+           timeDecay * 0.20 + commentScore * 0.10) * 10
         ) 
   
         return {
